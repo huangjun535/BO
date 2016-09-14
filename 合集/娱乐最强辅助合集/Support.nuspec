@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Support</id>
+        <version>2.0.13.0</version>
+        <title>Support</title>
+        <authors>h3h3</authors>
+        <owners>h3h3</owners>
+        <projectUrl>https://github.com/h3h3/LeagueSharp</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Support</description>
+        <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+        <copyright>Copyright 2015</copyright>
+        <tags>Support</tags>
+    </metadata>
+    <files>
+        <file src="Support.exe" target="Support.exe" />
+    </files>
+</package>

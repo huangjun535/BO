@@ -1,0 +1,14 @@
+[
+  {
+    "DangerLevel": "Low",
+    "MovementInterrupts": true,
+    "Name": "OdinCaptureChannel",
+    "Slot": 62
+  },
+  {
+    "DangerLevel": "Medium",
+    "MovementInterrupts": true,
+    "Name": "summonerteleport",
+    "Slot": "Unknown"
+  }
+]

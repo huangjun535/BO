@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5CD4F9E-0F5E-4A46-92FB-67414CDCB84D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnderratedAIO</RootNamespace>
+    <AssemblyName>UnderratedAIO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clipper_library">
+      <HintPath>C:\PlaySharp\References\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp">
+      <HintPath>C:\PlaySharp\References\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common">
+      <HintPath>C:\PlaySharp\References\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>C:\PlaySharp\References\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>C:\PlaySharp\References\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SPrediction">
+      <HintPath>C:\PlaySharp\References\SPrediction.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Champions\ChoGath.cs" />
+    <Compile Include="Champions\Ezreal.cs" />
+    <Compile Include="Champions\Fizz.cs" />
+    <Compile Include="Champions\Galio.cs" />
+    <Compile Include="Champions\Gangplank.cs" />
+    <Compile Include="Champions\Gragas.cs" />
+    <Compile Include="Champions\Hecarim.cs" />
+    <Compile Include="Champions\Jax.cs" />
+    <Compile Include="Champions\Kennen.cs" />
+    <Compile Include="Champions\Evelynn.cs" />
+    <Compile Include="Champions\Fiora.cs" />
+    <Compile Include="Champions\Garen.cs" />
+    <Compile Include="Champions\Maokai.cs" />
+    <Compile Include="Champions\Mordekaiser.cs" />
+    <Compile Include="Champions\Nasus.cs" />
+    <Compile Include="Champions\Nocturne.cs" />
+    <Compile Include="Champions\Olaf.cs" />
+    <Compile Include="Champions\Other.cs" />
+    <Compile Include="Champions\Poppy.cs" />
+    <Compile Include="Champions\Renekton.cs" />
+    <Compile Include="Champions\Rumble.cs" />
+    <Compile Include="Champions\Sejuani.cs" />
+    <Compile Include="Champions\Shaco.cs" />
+    <Compile Include="Champions\Shen.cs" />
+    <Compile Include="Champions\Singed.cs" />
+    <Compile Include="Champions\Sion.cs" />
+    <Compile Include="Champions\Skarner.cs" />
+    <Compile Include="Champions\TahmKench.cs" />
+    <Compile Include="Champions\Trundle.cs" />
+    <Compile Include="Champions\Tryndamere.cs" />
+    <Compile Include="Champions\Udyr.cs" />
+    <Compile Include="Champions\Veigar.cs" />
+    <Compile Include="Champions\Volibear.cs" />
+    <Compile Include="Champions\MonkeyKing.cs" />
+    <Compile Include="Champions\Yorick.cs" />
+    <Compile Include="Champions\Zac.cs" />
+    <Compile Include="Helpers\AutoLeveler.cs" />
+    <Compile Include="Helpers\FpsBalancer.cs" />
+    <Compile Include="Helpers\HpBarDamageIndicator.cs" />
+    <Compile Include="Helpers\PetHandler.cs" />
+    <Compile Include="Helpers\CombatHelper.cs" />
+    <Compile Include="Helpers\DrawHelper.cs" />
+    <Compile Include="Helpers\DynamicInitializer.cs" />
+    <Compile Include="Helpers\Environment.cs" />
+    <Compile Include="Helpers\IncomingDamage.cs" />
+    <Compile Include="Helpers\ItemHandler.cs" />
+    <Compile Include="Helpers\Jungle.cs" />
+    <Compile Include="Helpers\OrbWalker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\SkillShot\Collision.cs" />
+    <Compile Include="Helpers\SkillShot\Geometry.cs" />
+    <Compile Include="Helpers\SkillShot\Skillshot.cs" />
+    <Compile Include="Helpers\SkillShot\SpellDatabase.cs" />
+    <Compile Include="Helpers\SkillShot\SkillshotDetector.cs" />
+    <Compile Include="Helpers\SkillShot\Utils.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Exclamation_small_r.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

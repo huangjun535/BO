@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82CF2337-F3FC-47EB-AF25-322F9B8D3323}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheTwitch</RootNamespace>
+    <AssemblyName>TheTwitch</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LeagueSharp">
+      <HintPath>F:\Lol\System\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common">
+      <HintPath>F:\Lol\System\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Lol\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\ComboSystem\ComboProvider.cs" />
+    <Compile Include="Commons\ComboSystem\Skill.cs" />
+    <Compile Include="Commons\DamageIndicator.cs" />
+    <Compile Include="Commons\Debug\DevAssistant.cs" />
+    <Compile Include="Commons\Extensions.cs" />
+    <Compile Include="Commons\IManager.cs" />
+    <Compile Include="Commons\ItemManager.cs" />
+    <Compile Include="Commons\Items\BilgewaterCutlass.cs" />
+    <Compile Include="Commons\Items\Botrk.cs" />
+    <Compile Include="Commons\Items\IActivateableItem.cs" />
+    <Compile Include="Commons\Items\RavenousHydra.cs" />
+    <Compile Include="Commons\Items\SeraphsEmbrace.cs" />
+    <Compile Include="Commons\Items\YoumusBlade.cs" />
+    <Compile Include="Commons\ManaManager.cs" />
+    <Compile Include="Commons\MenuExtensions.cs" />
+    <Compile Include="Commons\Prediction\Prediction.cs" />
+    <Compile Include="Commons\SummonerManager.cs" />
+    <Compile Include="Commons\Summoners\Cleanse.cs" />
+    <Compile Include="Commons\Summoners\Heal.cs" />
+    <Compile Include="Commons\Summoners\ISummonerSpell.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Twitch.cs" />
+    <Compile Include="TwitchCombo.cs" />
+    <Compile Include="TwitchE.cs" />
+    <Compile Include="TwitchQ.cs" />
+    <Compile Include="TwitchR.cs" />
+    <Compile Include="TwitchW.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Commons\ComboSystem\Combo System thoughts.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

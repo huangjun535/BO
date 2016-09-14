@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AB3F7D6-E88E-4A02-9426-B3771253CBDE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YuleVHRfix</RootNamespace>
+    <AssemblyName>YuleVHRfix</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clipper_library">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="DZLib">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\DZLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SPrediction">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\SPrediction.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YuLeLibrary">
+      <HintPath>C:\Program Files (x86)\LeagueSharp\System\YuLeLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="External\Activator\Activator.cs" />
+    <Compile Include="External\Activator\ActivatorEnums.cs" />
+    <Compile Include="External\Activator\ActivatorSpells\Barrier.cs" />
+    <Compile Include="External\Activator\ActivatorSpells\Heal.cs" />
+    <Compile Include="External\Activator\ActivatorSpells\Ignite.cs" />
+    <Compile Include="External\Activator\ActivatorSpells\IVHRSpell.cs" />
+    <Compile Include="External\Activator\Items\IVHRItem.cs" />
+    <Compile Include="External\Activator\Items\_BOTRK.cs" />
+    <Compile Include="External\Activator\Items\_Cutlass.cs" />
+    <Compile Include="External\Activator\Items\_Youmuu.cs" />
+    <Compile Include="External\Cleanser\Cleanser.cs" />
+    <Compile Include="External\Cleanser\CleanserSpell.cs" />
+    <Compile Include="External\CustomAntigapcloser.cs" />
+    <Compile Include="External\DamagePrediction.cs" />
+    <Compile Include="External\EvadeHelper.cs" />
+    <Compile Include="External\Evade\Collision.cs" />
+    <Compile Include="External\Evade\EvadeSpellData.cs" />
+    <Compile Include="External\Evade\EvadeSpellDatabase.cs" />
+    <Compile Include="External\Evade\Geometry.cs" />
+    <Compile Include="External\Evade\Skillshot.cs" />
+    <Compile Include="External\Evade\SkillshotDetector.cs" />
+    <Compile Include="External\Evade\SpellData.cs" />
+    <Compile Include="External\Evade\SpellDatabase.cs" />
+    <Compile Include="External\Evade\WindWall.cs" />
+    <Compile Include="External\ProfileSelector\DefaultProfiles\Asuna.cs" />
+    <Compile Include="External\ProfileSelector\DefaultProfiles\Eirik.cs" />
+    <Compile Include="External\ProfileSelector\DefaultProfiles\IDefaultProfile.cs" />
+    <Compile Include="External\ProfileSelector\ProfileSelector.cs" />
+    <Compile Include="External\ProfileSelector\ProfileValues\ProfilerEnum.cs" />
+    <Compile Include="External\ProfileSelector\Values\BoolValue.cs" />
+    <Compile Include="External\ProfileSelector\Values\IValue.cs" />
+    <Compile Include="External\ProfileSelector\Values\SelectorEnums.cs" />
+    <Compile Include="External\ProfileSelector\Values\SliderValue.cs" />
+    <Compile Include="External\Translation\Languages\Chinese.cs" />
+    <Compile Include="External\Translation\Languages\English.cs" />
+    <Compile Include="External\Translation\Languages\French_Test.cs" />
+    <Compile Include="External\Translation\Languages\German.cs" />
+    <Compile Include="External\Translation\Languages\Italian.cs" />
+    <Compile Include="External\Translation\Languages\IVHRLanguage.cs" />
+    <Compile Include="External\Translation\Languages\Korean.cs" />
+    <Compile Include="External\Translation\Languages\Portuguese.cs" />
+    <Compile Include="External\Translation\Languages\Spanish.cs" />
+    <Compile Include="External\Translation\TranslationInterface.cs" />
+    <Compile Include="Modules\IModule.cs" />
+    <Compile Include="Modules\ModuleHelpers\ModuleEnums.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\AutoE.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\AutoKindred.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\CondemnJungleMobs.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\EAfterAA.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\EKS.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\FlashCondemn.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\FlashRepel.cs" />
+    <Compile Include="Modules\ModuleList\Condemn\LowLifePeel.cs" />
+    <Compile Include="Modules\ModuleList\Misc\DisableMovement.cs" />
+    <Compile Include="Modules\ModuleList\Misc\Focus2WStacks.cs" />
+    <Compile Include="Modules\ModuleList\Misc\Reveal.cs" />
+    <Compile Include="Modules\ModuleList\Tumble\NoAAStealth.cs" />
+    <Compile Include="Modules\ModuleList\Tumble\QKS.cs" />
+    <Compile Include="Modules\ModuleList\Tumble\Walltumble.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skills\Condemn\CondemnExtensions.cs" />
+    <Compile Include="Skills\Condemn\CondemnLogic.cs" />
+    <Compile Include="Skills\Condemn\InterrupterGapcloser.cs" />
+    <Compile Include="Skills\Condemn\Methods\Marksman.cs" />
+    <Compile Include="Skills\Condemn\Methods\Shine.cs" />
+    <Compile Include="Skills\Condemn\Methods\VHReborn.cs" />
+    <Compile Include="Skills\Condemn\Methods\VHRevolution.cs" />
+    <Compile Include="Skills\Condemn\Methods\VHRevolution_Old.cs" />
+    <Compile Include="Skills\Tumble\TumbleLogic.cs" />
+    <Compile Include="Skills\Tumble\TumbleMethods.cs" />
+    <Compile Include="Skills\Tumble\TumblePositioning.cs" />
+    <Compile Include="Skills\Tumble\VHRQ\QProvider.cs" />
+    <Compile Include="Skills\Tumble\VHRQ\VHRQLogic.cs" />
+    <Compile Include="Utility\DrawManager.cs" />
+    <Compile Include="Utility\Enumerations\Enums.cs" />
+    <Compile Include="Utility\Helpers\Extensions.cs" />
+    <Compile Include="Utility\Helpers\PlayerHelper.cs" />
+    <Compile Include="Utility\Helpers\StealthHelper.cs" />
+    <Compile Include="Utility\Helpers\VHRGeometry.cs" />
+    <Compile Include="Utility\Helpers\VHRPolygon.cs" />
+    <Compile Include="Utility\MenuUtility\MenuExtensions.cs" />
+    <Compile Include="Utility\MenuUtility\MenuGenerator.cs" />
+    <Compile Include="Utility\Variables.cs" />
+    <Compile Include="Utility\VHRBootstrap.cs" />
+    <Compile Include="YuleVHR.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

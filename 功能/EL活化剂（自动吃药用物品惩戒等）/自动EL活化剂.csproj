@@ -1,0 +1,685 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06DA242B-DDA5-4CE0-9C45-544FB1491C16}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElUtilitySuite</RootNamespace>
+    <AssemblyName>ElUtilitySuite</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LeagueSharp">
+      <HintPath>C:\Program Files (x86)\2bScOWoCt\References\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common">
+      <HintPath>C:\Program Files (x86)\2bScOWoCt\References\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Data">
+      <HintPath>C:\Program Files (x86)\2bScOWoCt\References\LeagueSharp.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SharpDX, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\2bScOWoCt\References\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\2bScOWoCt\References\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Summoners\Cleanse2.cs" />
+    <Compile Include="Trackers\SpellCountdownTracker.cs" />
+    <Compile Include="Trackers\SpellTracker1.cs" />
+    <Compile Include="Trackers\WardTracker.cs" />
+    <Compile Include="Vendor\SFX\BitmapExtensions.cs" />
+    <Compile Include="Vendor\SFX\FloatExtensions.cs" />
+    <Compile Include="Vendor\SFX\FontExtension.cs" />
+    <Compile Include="Vendor\SFX\GameObjects.cs" />
+    <Compile Include="Vendor\SFX\ImageLoader.cs" />
+    <Compile Include="Items\Defensive2.cs" />
+    <Compile Include="Items\DefensiveItems\FaceOfTheMountain.cs" />
+    <Compile Include="Items\DefensiveItems\Locket.cs" />
+    <Compile Include="Items\DefensiveItems\Randuins.cs" />
+    <Compile Include="Items\DefensiveItems\Seraphs.cs" />
+    <Compile Include="Items\DefensiveItems\Talisman.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Offensive2.cs" />
+    <Compile Include="Items\OffensiveItems\Botrk.cs" />
+    <Compile Include="Items\OffensiveItems\Cutlass.cs" />
+    <Compile Include="Items\OffensiveItems\FrostQueen.cs" />
+    <Compile Include="Items\OffensiveItems\Hextech.cs" />
+    <Compile Include="Items\OffensiveItems\HextechGLP-800.cs" />
+    <Compile Include="Items\OffensiveItems\HextechProtobelt-01.cs" />
+    <Compile Include="Items\OffensiveItems\Hydra.cs" />
+    <Compile Include="Items\OffensiveItems\Tiamat.cs" />
+    <Compile Include="Items\OffensiveItems\TitanicHydra.cs" />
+    <Compile Include="Items\OffensiveItems\Youmuu.cs" />
+    <Compile Include="Others\TurnAround.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Summoners\Barrier.cs" />
+    <Compile Include="Summoners\Cleanse.cs" />
+    <Compile Include="Summoners\Exhaust.cs" />
+    <Compile Include="Summoners\Mark.cs" />
+    <Compile Include="Trackers\BuildingTracker.cs" />
+    <Compile Include="Trackers\HealthTracker.cs" />
+    <Compile Include="Trackers\LastPositionTracker.cs" />
+    <Compile Include="Utility\AntiStealth.cs" />
+    <Compile Include="Entry.cs" />
+    <Compile Include="Summoners\Heal.cs" />
+    <Compile Include="Summoners\Ignite.cs" />
+    <Compile Include="IPlugin.cs" />
+    <Compile Include="Trackers\JungleTracker.cs" />
+    <Compile Include="Items\Potions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trackers\RecallTracker.cs" />
+    <Compile Include="Summoners\Smite.cs" />
+    <Compile Include="Items\Zhonya.cs" />
+    <Compile Include="Utility\AutoLantern.cs" />
+    <Compile Include="Utility\BlueTrinket.cs" />
+    <Compile Include="Trackers\CooldownTracker.cs" />
+    <Compile Include="Utility\UltimateLeveler.cs" />
+    <Compile Include="Vendor\SFX\IncomingDamageManager.cs" />
+    <Compile Include="Vendor\SFX\MDrawing.cs" />
+    <Compile Include="Vendor\SFX\SpriteExtension.cs" />
+    <Compile Include="Vendor\SFX\VectorExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amumu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anivia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ashe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blitzcrank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Braum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caitlyn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cassiopeia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chogath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Draven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrMundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ezreal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fizz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Galio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gangplank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gragas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hecarim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heimerdinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illaoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Irelia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Janna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JarvanIV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jayce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jinx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kalista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karthus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kassadin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Katarina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kayle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khazix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kindred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KogMaw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leblanc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeeSin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lissandra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lucian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malphite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malzahar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maokai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterYi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MissFortune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonkeyKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mordekaiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morgana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nautilus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nidalee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nocturne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nunu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orianna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pantheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quinn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RekSai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renekton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rengar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rumble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sejuani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shyvana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Singed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sivir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skarner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soraka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Syndra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TahmKench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Talon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teemo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tristana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tryndamere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwistedFate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Udyr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Urgot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Varus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vayne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Veigar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Velkoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Viktor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vladimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volibear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xerath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yasuo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yorick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ziggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zilean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aatrox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Akali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alistar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LP_Teleport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taliyah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jhin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_Hud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_HudSelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_SummonerBarrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerboost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerdot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerexhaust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerflash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerhaste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerheal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonersmite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_summonerteleport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WT_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WT_Pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\AbsoluteZero.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\AzirR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\BraumRWrapper.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\CaitlynAceintheHole.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Crowstorm.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\CurseoftheSadMummy.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Destiny.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\DravenRCast.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\EkkoR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\EnchantedCrystalArrow.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\EvelynnR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\FioraR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\FizzMarinerDoom.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\GalioIdolOfDurand.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\GangplankR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\GnarR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\GragasR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\GravesChargeShot.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\HecarimUlt.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Highlander.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\IllaoiR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\InfernalGuardian.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\InfiniteDuress.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\JarvanIVCataclysm.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\JinxR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\KatarinaR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\KennenShurikenStorm.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\KindredR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\LeonaSolarFlare.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\LissandraR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\LucianR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\LuluR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\MissFortuneBulletTime.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\MonkeyKingSpinToWin.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\NamiR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\NautilusGrandLine.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\NocturneParanoia.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\PantheonRJump.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ReapTheWhirlwind.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\RekSaiR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\RenektonReignOfTheTyrant.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\RengarR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\RivenFengShuiEngine.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\RumbleCarpetBomb.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SejuaniGlacialPrisonStart.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SionR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SivirR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SkarnerImpale.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SonaR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SorakaR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\SyndraR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\TahmKenchNewR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\TalonShadowAssault.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Tremors2.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\UFSlash.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\UndyingRage.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\UrgotSwap2.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\VarusR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ViktorChaosStorm.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ViR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\VladimirR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\XerathLocusOfPower2.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\YorickReviveAlly.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ZacR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ZedR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ZiggsR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\ShenR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\VayneInquisition.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\BlindMonkRKick.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\FerociousHowl.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\JhinRShot.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\KalistaRx.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\JudicatorIntervention.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\BardR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\AatroxR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\AhriTumble.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Baron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\LuxMaliceCannon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Sadism.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\GarenR.png" />
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\HeimerdingerR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\KarthusFallenOne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\EzrealTrueshotBarrage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\NasusR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\DariusExecute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\TwitchFullAutomatic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Teleport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Rebirthready.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CooldownNotifIcons\Zacrebirthready.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AurelionSol.png" />
+    <None Include="Resources\Darius.png" />
+    <None Include="Resources\Evelynn.png" />
+    <None Include="Resources\FiddleSticks.png" />
+    <None Include="Resources\Kennen.png" />
+    <None Include="Resources\Kled.png" />
+    <None Include="Resources\Rammus.png" />
+    <None Include="Resources\Swain.png" />
+    <None Include="Resources\Taric.png" />
+    <None Include="Resources\Warwick.png" />
+    <None Include="Resources\XinZhao.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

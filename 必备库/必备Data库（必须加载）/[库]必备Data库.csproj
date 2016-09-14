@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DFD4F21-388F-450C-BD4A-B21A33F853F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeagueSharp.Data</RootNamespace>
+    <AssemblyName>LeagueSharp.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>LeagueSharp.Data.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LeagueSharp">
+      <HintPath>C:\Users\Administrator\Desktop\LeagueSharp\System\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Users\Administrator\Desktop\LeagueSharp\System\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Desktop\LeagueSharp\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data.cs" />
+    <Compile Include="DataTypes\ChampionDatabase.cs" />
+    <Compile Include="DataTypes\ChampionPriorityData.cs" />
+    <Compile Include="DataTypes\DamageDatabase.cs" />
+    <Compile Include="DataTypes\FlashJukeData.cs" />
+    <Compile Include="DataTypes\GapcloserData.cs" />
+    <Compile Include="DataTypes\InterruptableSpellData.cs" />
+    <Compile Include="DataTypes\MapData.cs" />
+    <Compile Include="DataTypes\SpellDatabase.cs" />
+    <Compile Include="DataTypes\TrapLocationData.cs" />
+    <Compile Include="Enumerations\CastType.cs" />
+    <Compile Include="Enumerations\CollisionableObjects.cs" />
+    <Compile Include="Enumerations\DamageScalingTarget.cs" />
+    <Compile Include="Enumerations\DamageScalingType.cs" />
+    <Compile Include="Enumerations\DamageStage.cs" />
+    <Compile Include="Enumerations\DangerLevel.cs" />
+    <Compile Include="Enumerations\GapcloserType.cs" />
+    <Compile Include="Enumerations\SpellEffectType.cs" />
+    <Compile Include="Enumerations\SpellTags.cs" />
+    <Compile Include="Enumerations\SpellType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\IFilter.cs" />
+    <Compile Include="Utility\JsonFactory.cs" />
+    <Compile Include="Utility\Resources\ResourceFactory.cs" />
+    <Compile Include="Utility\Resources\ResourceImportAttribute.cs" />
+    <Compile Include="Utility\Resources\ResourceLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EmbeddedResource Include="Resources\ChampionData.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Aatrox.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Ahri.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Akali.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Alistar.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Amumu.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Anivia.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Annie.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Ashe.json" />
+    <EmbeddedResource Include="Resources\ChampionData\AurelionSol.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Azir.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Bard.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Blitzcrank.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Brand.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Braum.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Caitlyn.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Cassiopeia.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Chogath.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Corki.json" />
+    <None Include="LeagueSharp.Data.snk" />
+    <EmbeddedResource Include="Resources\SpellDatabase.json" />
+    <EmbeddedResource Include="Resources\GapcloserData.json" />
+    <EmbeddedResource Include="Resources\GlobalInterruptableSpellData.json" />
+    <EmbeddedResource Include="Resources\InterruptableSpellsData.json" />
+    <EmbeddedResource Include="Resources\MapData.json" />
+    <EmbeddedResource Include="Resources\PriorityData.json" />
+    <EmbeddedResource Include="Resources\TrapLocationsData.json" />
+    <EmbeddedResource Include="Resources\FlashJukeData.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Darius.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Diana.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Draven.json" />
+    <EmbeddedResource Include="Resources\ChampionData\DrMundo.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Ekko.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Elise.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Evelynn.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Ezreal.json" />
+    <EmbeddedResource Include="Resources\ChampionData\FiddleSticks.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Fiora.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Fizz.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Galio.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Gangplank.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Garen.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Gnar.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Gragas.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Graves.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Hecarim.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Heimerdinger.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Illaoi.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Irelia.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Janna.json" />
+    <EmbeddedResource Include="Resources\ChampionData\JarvanIV.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Jax.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Jayce.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Jhin.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Jinx.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Kalista.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Karma.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Karthus.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Kassadin.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Katarina.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Kayle.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Kennen.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Khazix.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Kindred.json" />
+    <EmbeddedResource Include="Resources\ChampionData\KogMaw.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Leblanc.json" />
+    <EmbeddedResource Include="Resources\ChampionData\LeeSin.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Leona.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Lissandra.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Lucian.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Lulu.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Lux.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Malphite.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Malzahar.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Maokai.json" />
+    <EmbeddedResource Include="Resources\ChampionData\MasterYi.json" />
+    <EmbeddedResource Include="Resources\ChampionData\MissFortune.json" />
+    <EmbeddedResource Include="Resources\ChampionData\MonkeyKing.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Mordekaiser.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Morgana.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Nami.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Nasus.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Nautilus.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Nidalee.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Nocturne.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Nunu.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Olaf.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Orianna.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Pantheon.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Poppy.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Quinn.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Rammus.json" />
+    <EmbeddedResource Include="Resources\ChampionData\RekSai.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Renekton.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Rengar.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Riven.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Rumble.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Ryze.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Sejuani.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Shaco.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Shen.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Shyvana.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Singed.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Sion.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Sivir.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Skarner.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Sona.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Soraka.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Swain.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Syndra.json" />
+    <EmbeddedResource Include="Resources\ChampionData\TahmKench.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Talon.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Taric.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Teemo.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Thresh.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Tristana.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Trundle.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Tryndamere.json" />
+    <EmbeddedResource Include="Resources\ChampionData\TwistedFate.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Twitch.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Udyr.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Urgot.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Varus.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Vayne.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Veigar.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Velkoz.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Vi.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Viktor.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Vladimir.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Volibear.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Warwick.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Xerath.json" />
+    <EmbeddedResource Include="Resources\ChampionData\XinZhao.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Yasuo.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Yorick.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Zac.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Zed.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Ziggs.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Zilean.json" />
+    <EmbeddedResource Include="Resources\ChampionData\Zyra.json" />
+    <EmbeddedResource Include="Resources\ItemData.json" />
+    <EmbeddedResource Include="Resources\DamageData\6.11.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataTypes\ItemDatabase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
